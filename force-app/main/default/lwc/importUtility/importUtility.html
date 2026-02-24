@@ -1,0 +1,16 @@
+<template>
+    <lightning-card>
+    
+          <img  src={sr}/>
+    
+  <template lwc:if={showinProd}>
+    with custom label
+  </template>
+  <template lwc:else>
+    without custom label
+  </template>
+
+  <p>current user is {userId}</p><br/>
+  <p>has permission ? {haspermission}</p>
+  </lightning-card>
+</template>

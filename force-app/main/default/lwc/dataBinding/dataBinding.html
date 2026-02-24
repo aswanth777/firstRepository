@@ -1,0 +1,38 @@
+<template>
+    
+    <lightning-card>
+    <lightning-card  title="Data binding with button , getter , conditional rendering">
+        <lightning-button  title="Data binding with button" class="slds-p-left_medium" label="click me" variant="brand"
+            onclick={handleClick}></lightning-button>
+        <div class="slds-m-left_medium">
+            {message}
+        </div>
+    </lightning-card>
+
+    <lightning-card title="Data binding with input">
+        <lightning-input label="Enter the value" value={inputvalue} onchange={handleInputChnage}
+            class="slds-p-left_medium"></lightning-input>
+        <div class="slds-m-left_medium">
+            <p> {inputvalue}</p>
+
+        </div>
+
+        <div title="getter method">
+                <p class="slds-m-left_medium">{getInputValue}</p>
+        </div>
+
+    </lightning-card>
+
+    <template  lwc:if={displayItems}>
+
+      <lightning-card title="by conditional rendering">
+           <div>
+            <p class="slds-m-left_medium">rendered values are :</p>
+           <p class="slds-m-left_medium">  {renderedValues}  </p>
+           </div>
+      </lightning-card>
+    </template>
+
+    </lightning-card>
+
+</template>

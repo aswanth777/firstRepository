@@ -1,0 +1,30 @@
+<template>
+
+    <lightning-card title="Fetch data from apex mode 3-imprative call" icon-name="custom.custom26">
+<div>
+<p>
+    <lightning-button label="Load accounts" onclick={handleload}>
+ </lightning-button>
+</p>
+
+<template if:true={accounts}>
+
+    <template for:each={accounts} for:item="acc">
+    
+        <p key={acc.id}>{acc.Name}</p>
+    </template>
+    
+    </template>
+    
+    <template if:true={error}>
+        {error}
+    </template>
+    
+
+</div>
+
+
+
+    </lightning-card>
+    
+</template>

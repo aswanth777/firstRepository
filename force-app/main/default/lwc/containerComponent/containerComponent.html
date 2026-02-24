@@ -1,0 +1,11 @@
+<template>
+    Container Component<br />
+    Did i find any products ? {productsFound}<br />
+    {productList}
+    <template for:each={productList} for:item="product">
+        <p key={product.Id}>
+            {product.Name}</p>
+
+    </template>
+    <c-child-component></c-child-component>
+</template>

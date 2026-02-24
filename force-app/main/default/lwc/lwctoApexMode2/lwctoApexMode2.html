@@ -1,0 +1,26 @@
+<template>
+
+    <lightning-card title="lwc to apex mode 2 -wire a function " icon-name="custom.custom63">
+
+<div>
+
+<template if:true={accounts}>
+
+<template for:each={accounts} for:item="acc">
+
+    <p key={acc.id}>{acc.Name}</p>
+</template>
+
+</template>
+
+<template if:true={error}>
+    {error}
+</template>
+
+
+</div>
+
+
+    </lightning-card>
+    
+</template>

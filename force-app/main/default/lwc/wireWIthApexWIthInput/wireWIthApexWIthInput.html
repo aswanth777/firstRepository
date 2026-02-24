@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Wire With Apex WIth Input">
+        <template for:each={taskList} for:item="taskRecord">
+            <p key={taskRecord.Id}>
+                {taskRecord.status}-{taskRecord.Priority}
+            </p>
+        </template>
+
+</lightning-card>
+    
+</template>

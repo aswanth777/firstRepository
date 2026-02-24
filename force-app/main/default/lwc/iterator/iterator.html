@@ -1,0 +1,38 @@
+<template>
+    <lightning-card title="My tasks List with for each">
+        <p class="slds-p-horizontal_small">
+            <template for:each={taskList} for:item="eachTask">
+                <div key={eachTask.taskId}>
+                    {eachTask.taskName} - {eachTask.taskPriority} - {eachTask.taskProgress}
+                </div>
+            </template>
+        </p>
+        <p slot="footer">All The Best Keep Going!!!`</p>
+    </lightning-card>
+
+    <lightning-card title="My tasks with iterator">
+        <p class="slds-p-horizontal_small">
+
+            
+
+            <template iterator:task={taskList}>
+
+                <template lwc:if={task.first}>
+                    Top priority tasks :
+                    <p key={task.value.taskId}><b>{task.value.taskName} - {task.value.taskPriority} - {task.value.taskProgress}</b></p>
+                </template>
+                 
+                <div key={task.value.taskId}>
+                      <b>{task.value.taskName} - {task.value.taskPriority} - {task.value.taskProgress}</b>
+                </div>
+                <template lwc:if={task.last}>
+                    least priority tasks
+                      <p key={task.value.taskId}><b>{task.value.taskName} - {task.value.taskPriority} - {task.value.taskProgress}</b></p>
+                </template>
+
+
+            </template>
+        </p>
+        <p slot="footer">All The Best Keep Going!!!`</p>
+    </lightning-card>
+</template>

@@ -1,0 +1,38 @@
+<template>
+    <div class="slds-card">
+        <lightning-button variant="brand" label="option1 " title="Primary action" onclick={handleClick1}
+            class="slds-m-left_x-small"></lightning-button>
+        <lightning-button variant="brand" label="option 2" title="Primary action" onclick={handleClick2}
+            class="slds-m-left_x-small"></lightning-button>
+        <lightning-button variant="brand" label="option 3" title="Primary action" onclick={handleClick3}
+            class="slds-m-left_x-small"></lightning-button>
+
+        
+
+        <template lwc:if={displaySetting}>
+
+            <template lwc:if={template1}>
+                <h3> welcome to lightning magic !!!</h3>
+            </template>
+            
+
+            <template lwc:if={template2}>
+                <lightning-card class="slds-card" title="one way binding">
+                    Hi welcome {name}
+                </lightning-card>
+            </template>
+        
+
+       
+        <template lwc:if={template3}>
+            <lightning-card class="slds-card" title="two way binding">
+                <lightning-input value={inputvalue} type="text" label="Enter some text"
+                    onchange={handler}></lightning-input>
+                <br>
+                <p>input value is : {inputvalue}</p>
+            </lightning-card>
+        </template>
+        </template>
+    </div>
+
+</template>

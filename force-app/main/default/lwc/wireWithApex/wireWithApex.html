@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="wire With Apex" >
+        <template for:each={caseList} for:item="caseRecord">
+            <p key={caseRecord.Id}>
+                {caseRecord.subject} - {caseRecord.Priority}
+            </p>
+        </template>
+        <template if:true={errorMessage}>
+           Error in loading cases :{errorMessage}
+        </template>
+
+    </lightning-card>
+    
+</template>

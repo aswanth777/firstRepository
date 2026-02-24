@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Check Your Zodiac Sign">
+     <lightning-input  class="slds-m-around_x-small" type="text" value={useraName} label="Enter your name" onchange={handleNameChange}  ></lightning-input>
+      <lightning-input class="slds-m-around_x-small" type="date"  value={userBirthDate} label="Enter your date of birth" onchange={handleDateChange} ></lightning-input>
+      <lightning-button  class="slds-grid slds-grid_align-center" variant="brand" label="click here" title="click here " onclick={handleSubmit} ></lightning-button>
+        {userProfile.sign}
+        {userProfile.trait}
+        {userProfile.emoji}
+    </lightning-card>
+</template>

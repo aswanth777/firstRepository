@@ -1,0 +1,20 @@
+<template>
+   
+    <lightning-card  variant="Narrow"  title="component1" icon-name="standard:account">
+       <lightning-input type="checkbox" label="showdetails" onchange={checkboxfunction}></lightning-input>
+        <template if:true={aredetailsvisible}>
+   <div>
+    <p>{welcomemessage}</p>
+    <lightning-input value={welcomemessage} label="enter message" onchange={handlefunction}></lightning-input>
+    <p>Name :{name}</p>
+    <p>Company : {company}</p>
+    <p>{designation}</p> 
+</div>
+</template>
+<template if:false={aredetailsvisible}>
+    click the checkbox for details!!
+</template>
+</lightning-card>
+
+    
+</template>
